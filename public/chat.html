@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCampus — Assistant</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navigation"></div>
+
+  <main class="contenu">
+    <h1>Assistant</h1>
+    <p class="indice">
+      Posez une question (horaires, accès Wi-Fi, réservation de salle…).
+      La conversation reste affichée tant que votre session est ouverte.
+    </p>
+
+    <!-- Fil de la conversation : bulles utilisateur / assistant -->
+    <section id="conversation" class="conversation carte" aria-live="polite" aria-label="Conversation">
+      <p id="conversation-vide" class="conversation-vide">
+        Aucun message pour le moment. Posez votre première question ci-dessous.
+      </p>
+    </section>
+
+    <!-- Indicateur de chargement (assistant en train de répondre) -->
+    <div id="chargement" class="chat-chargement" role="status" hidden>
+      <span class="points" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>L'assistant rédige une réponse…</span>
+    </div>
+
+    <!-- Zone de saisie de la question -->
+    <form id="form-chat" class="chat-saisie" novalidate>
+      <label for="question" class="sr-only">Votre question</label>
+      <textarea id="question" name="question" rows="2"
+        placeholder="Écrivez votre question…" required></textarea>
+      <button type="submit" id="btn-envoyer" class="bouton bouton-compact">Envoyer</button>
+    </form>
+
+    <p id="erreur" class="message-erreur" role="alert"></p>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

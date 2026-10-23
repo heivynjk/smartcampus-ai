@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCampus — Ma file</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navigation"></div>
+
+  <main class="contenu">
+    <h1>Ma file</h1>
+
+    <p id="erreur" class="message-erreur" role="alert"></p>
+
+    <!-- Message affiché quand la file est vide -->
+    <section id="bloc-vide" class="carte" hidden>
+      <p>Aucun ticket à traiter pour le moment.</p>
+    </section>
+
+    <!-- Liste des tickets assignés et non résolus, triés par priorité -->
+    <section id="file" class="file" aria-live="polite"></section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/file.js"></script>
+</body>
+</html>

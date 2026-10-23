@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCampus — Signaler un incident</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navigation"></div>
+
+  <main class="contenu">
+    <h1>Signaler un incident</h1>
+
+    <!-- Formulaire de signalement -->
+    <section id="bloc-formulaire" class="carte">
+      <form id="form-signaler" novalidate>
+        <div class="champ" id="champ-categorie">
+          <label for="categorieId">Catégorie <span aria-hidden="true">*</span></label>
+          <select id="categorieId" name="categorieId" required>
+            <option value="">— Choisir une catégorie —</option>
+          </select>
+        </div>
+
+        <div class="champ" id="champ-lieu">
+          <label for="lieuId">Lieu <span aria-hidden="true">*</span></label>
+          <select id="lieuId" name="lieuId" required>
+            <option value="">— Choisir un lieu —</option>
+          </select>
+        </div>
+
+        <div class="champ" id="champ-description">
+          <label for="description">Description <span aria-hidden="true">*</span></label>
+          <textarea id="description" name="description" rows="4"
+            placeholder="Décrivez le problème (salle, matériel, réseau…)" required></textarea>
+        </div>
+
+        <div class="champ" id="champ-photo">
+          <label for="photo">Photo (JPG ou PNG, 5 Mo max — facultatif)</label>
+          <input type="file" id="photo" name="photo" accept="image/jpeg,image/png" />
+        </div>
+
+        <button type="submit" class="bouton">Envoyer le signalement</button>
+        <p id="erreur" class="message-erreur" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Écran de confirmation (affiché après création) -->
+    <section id="bloc-confirmation" class="carte" hidden aria-live="polite">
+      <h2 class="confirmation-titre">Signalement enregistré</h2>
+      <p>
+        Votre signalement porte le numéro
+        <strong id="confirmation-numero"></strong>.
+      </p>
+      <p>Il apparaît désormais dans « Mes demandes ».</p>
+      <p>
+        <a id="confirmation-lien" class="bouton" href="#">Voir le détail de la demande</a>
+      </p>
+      <p>
+        <a href="mes-demandes.html">Retour à mes demandes</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/signaler.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCampus — Tableau de bord</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navigation"></div>
+
+  <main class="contenu">
+    <div class="entete-page">
+      <h1>Tableau de bord</h1>
+      <div class="champ champ-periode">
+        <label for="periode">Période</label>
+        <select id="periode" name="periode">
+          <option value="semaine">7 derniers jours</option>
+          <option value="mois" selected>30 derniers jours</option>
+          <option value="semestre">6 derniers mois</option>
+        </select>
+      </div>
+    </div>
+
+    <p id="erreur" class="message-erreur" role="alert"></p>
+
+    <!-- Message affiché quand la période ne contient aucun ticket (exigence 7.4) -->
+    <section id="bloc-vide" class="carte" aria-live="polite" hidden>
+      <p>Aucun incident sur la période</p>
+    </section>
+
+    <!-- Indicateurs : tuiles + graphiques Chart.js -->
+    <div id="indicateurs" class="dashboard-grille" aria-live="polite">
+      <section class="carte tuile">
+        <p class="tuile-valeur" id="valeur-total">—</p>
+        <p class="tuile-libelle">Tickets sur la période</p>
+      </section>
+
+      <section class="carte tuile">
+        <p class="tuile-valeur" id="valeur-delai">—</p>
+        <p class="tuile-libelle">Délai moyen de résolution (heures)</p>
+      </section>
+
+      <section class="carte graphique">
+        <h2>Tickets par catégorie</h2>
+        <div class="graphique-zone">
+          <canvas id="graph-categorie" role="img"
+                  aria-label="Nombre de tickets par catégorie"></canvas>
+        </div>
+      </section>
+
+      <section class="carte graphique">
+        <h2>Top 5 des lieux</h2>
+        <div class="graphique-zone">
+          <canvas id="graph-lieu" role="img"
+                  aria-label="Top 5 des lieux par nombre de tickets"></canvas>
+        </div>
+      </section>
+
+      <section class="carte graphique">
+        <h2>Tickets par statut</h2>
+        <div class="graphique-zone">
+          <canvas id="graph-statut" role="img"
+                  aria-label="Répartition des tickets par statut"></canvas>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Chart.js via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
