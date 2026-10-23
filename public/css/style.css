@@ -1,0 +1,805 @@
+/* SmartCampus AI — feuille de style mobile first.
+   Utilisable à 375 px de large sans défilement horizontal (RG 9.2). */
+
+:root {
+  --bleu: #1d4ed8;
+  --bleu-fonce: #1e3a8a;
+  --gris-bg: #f3f4f6;
+  --gris-bord: #d1d5db;
+  --gris-texte: #374151;
+  --rouge: #dc2626;
+  --vert: #16a34a;
+  --orange: #d97706;
+  --blanc: #ffffff;
+  --rayon: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--gris-texte);
+  background: var(--gris-bg);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* ---------------------------------------------------------------------------
+   Barre de navigation
+--------------------------------------------------------------------------- */
+.barre-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--bleu-fonce);
+  color: var(--blanc);
+}
+
+.barre-nav .marque {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.barre-nav .liens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  flex: 1 1 auto;
+}
+
+.barre-nav a {
+  color: var(--blanc);
+  text-decoration: none;
+  padding: 0.25rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.barre-nav a.actif {
+  border-bottom-color: var(--blanc);
+  font-weight: 600;
+}
+
+.barre-nav .profil {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.barre-nav .nom {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.barre-nav .notifications {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.badge-notifications {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.6rem;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
+  border-radius: 0.6rem;
+  background: #d32f2f;
+  color: var(--blanc);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
+}
+
+.lien-bouton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--blanc);
+  border-radius: var(--rayon);
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.lien-bouton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------------------------------------------------------------------------
+   Contenu
+--------------------------------------------------------------------------- */
+.contenu {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.75rem;
+}
+
+/* Écran de confirmation d'un signalement (exigence 2.7) */
+.confirmation-titre {
+  color: var(--vert);
+}
+
+/* Un bouton peut aussi être un lien (ex. « Voir le détail ») */
+a.bouton {
+  text-align: center;
+  text-decoration: none;
+}
+
+.carte {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bord);
+  border-radius: var(--rayon);
+  padding: 1.25rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Page de connexion
+--------------------------------------------------------------------------- */
+.page-connexion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.page-connexion .carte {
+  width: 100%;
+  max-width: 380px;
+}
+
+.titre-app {
+  text-align: center;
+  color: var(--bleu-fonce);
+  margin-top: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Formulaires
+--------------------------------------------------------------------------- */
+.champ {
+  margin-bottom: 1rem;
+}
+
+.champ label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.champ input,
+.champ select,
+.champ textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--gris-bord);
+  border-radius: var(--rayon);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.champ input:focus,
+.champ select:focus,
+.champ textarea:focus {
+  outline: 2px solid var(--bleu);
+  outline-offset: 1px;
+}
+
+/* Champ obligatoire en erreur (RG-01) */
+.champ.erreur input,
+.champ.erreur select,
+.champ.erreur textarea {
+  border-color: var(--rouge);
+}
+
+.bouton {
+  display: inline-block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: var(--bleu);
+  color: var(--blanc);
+  border: none;
+  border-radius: var(--rayon);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bouton:hover {
+  background: var(--bleu-fonce);
+}
+
+.message-erreur {
+  color: var(--rouge);
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.indice {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+}
+
+/* ---------------------------------------------------------------------------
+   File du technicien (US-03)
+--------------------------------------------------------------------------- */
+.file {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ticket-entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-numero {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-right: auto;
+}
+
+.ticket-meta {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 0.5rem;
+}
+
+.ticket-description {
+  margin: 0 0 0.5rem;
+}
+
+.ticket-date {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0 0 0.75rem;
+}
+
+.ticket-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Badges (priorité, statut, « En retard ») */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--blanc);
+  white-space: nowrap;
+}
+
+.badge-statut {
+  background: var(--gris-texte);
+}
+
+.badge-retard {
+  background: var(--rouge);
+}
+
+.prio-critique {
+  background: var(--rouge);
+}
+
+.prio-haute {
+  background: var(--orange);
+}
+
+.prio-normale {
+  background: var(--bleu);
+}
+
+.prio-basse {
+  background: #6b7280;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive : au-dessus de 600 px, la barre ne retourne pas à la ligne
+--------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+  .barre-nav {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Suivi des demandes (US-02) — liste « Mes demandes » et détail d'un ticket
+--------------------------------------------------------------------------- */
+
+/* En-tête de page avec titre + action (ex. « Signaler ») */
+.entete-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.entete-page h1 {
+  margin: 0.5rem 0 1rem;
+}
+
+/* Bouton compact (ne prend pas toute la largeur) */
+.bouton-compact {
+  width: auto;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+/* Fil d'Ariane / lien de retour */
+.fil-ariane {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.fil-ariane a {
+  color: var(--bleu);
+  text-decoration: none;
+}
+
+.fil-ariane a:hover {
+  text-decoration: underline;
+}
+
+/* Une carte-lien : toute la carte est cliquable (liste des demandes) */
+.carte-lien {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.carte-lien:hover {
+  border-color: var(--bleu);
+}
+
+.carte-lien:focus-visible {
+  outline: 2px solid var(--bleu);
+  outline-offset: 2px;
+}
+
+/* Badges de statut (mêmes couleurs que les règles métier) */
+.statut-ouvert {
+  background: var(--orange);
+}
+
+.statut-en-cours {
+  background: var(--bleu);
+}
+
+.statut-resolu {
+  background: var(--vert);
+}
+
+/* ---------------------------------------------------------------------------
+   Détail d'un ticket
+--------------------------------------------------------------------------- */
+.detail-ticket {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Liste descriptive des informations du ticket */
+.ticket-infos {
+  margin: 0 0 1rem;
+}
+
+.info-ligne {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--gris-bg);
+}
+
+.info-ligne dt {
+  flex: 0 0 8rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.info-ligne dd {
+  margin: 0;
+  flex: 1 1 10rem;
+}
+
+/* Photo jointe : responsive, ne déborde jamais */
+.ticket-photo {
+  margin: 1rem 0 0;
+}
+
+.ticket-photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--rayon);
+  border: 1px solid var(--gris-bord);
+}
+
+/* ---------------------------------------------------------------------------
+   Chronologie (historique) — lisible à 375 px, sans défilement horizontal
+--------------------------------------------------------------------------- */
+.chrono {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chrono-item {
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0 0 1rem 0;
+}
+
+/* Trait vertical reliant les évènements */
+.chrono-item::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0.4rem;
+  bottom: -0.4rem;
+  width: 2px;
+  background: var(--gris-bord);
+}
+
+.chrono-item:last-child {
+  padding-bottom: 0;
+}
+
+.chrono-item:last-child::before {
+  display: none;
+}
+
+.chrono-puce {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  margin-top: 0.4rem;
+  border-radius: 50%;
+  background: var(--bleu);
+  border: 2px solid var(--blanc);
+  box-shadow: 0 0 0 1px var(--gris-bord);
+}
+
+.chrono-contenu {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.chrono-entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin: 0 0 0.25rem;
+}
+
+.chrono-acteur {
+  font-weight: 600;
+}
+
+.chrono-date {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.chrono-transition {
+  margin: 0 0 0.25rem;
+}
+
+.chrono-commentaire {
+  margin: 0.25rem 0 0;
+  padding: 0.5rem 0.75rem;
+  background: var(--gris-bg);
+  border-radius: var(--rayon);
+  /* Les longs commentaires passent à la ligne sans casser la mise en page */
+  overflow-wrap: anywhere;
+}
+
+/* Les badges de transition peuvent contenir « A → B » : autoriser le retour
+   à la ligne sur mobile plutôt qu'un débordement horizontal. */
+.chrono-transition .badge {
+  white-space: normal;
+}
+
+/* ---------------------------------------------------------------------------
+   Assistant IA (US-04) — conversation en bulles, lisible à 375 px
+--------------------------------------------------------------------------- */
+
+/* Élément visuellement masqué mais accessible aux lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Fil de la conversation : colonne de bulles, défilement vertical seul */
+.conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 1rem;
+}
+
+.conversation-vide {
+  color: #6b7280;
+  text-align: center;
+  margin: 0;
+}
+
+/* Bulle de message : ne dépasse jamais la largeur disponible */
+.bulle {
+  max-width: 85%;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--rayon);
+  /* Les longs messages passent à la ligne sans débordement horizontal */
+  overflow-wrap: anywhere;
+}
+
+.bulle-texte {
+  margin: 0;
+  /* Préserve les retours à la ligne saisis par l'utilisateur / le modèle */
+  white-space: pre-wrap;
+}
+
+/* Message de l'utilisateur : aligné à droite, fond bleu */
+.bulle-user {
+  align-self: flex-end;
+  background: var(--bleu);
+  color: var(--blanc);
+  border-bottom-right-radius: 2px;
+}
+
+/* Message de l'assistant : aligné à gauche, fond clair */
+.bulle-assistant {
+  align-self: flex-start;
+  background: var(--gris-bg);
+  color: var(--gris-texte);
+  border: 1px solid var(--gris-bord);
+  border-bottom-left-radius: 2px;
+}
+
+/* Fiche source sous la bulle de l'assistant (exigence 5.2) */
+.bulle-source {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Action « Créer un signalement » sous la bulle de l'assistant (US-05, 6.1) */
+.bulle-action {
+  margin-top: 0.6rem;
+}
+
+.bulle-action .bouton {
+  /* Bouton compact : ne prend pas toute la largeur, lisible à 375 px */
+  width: auto;
+}
+
+/* Indicateur de chargement (assistant en train de répondre) */
+.chat-chargement {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.chat-chargement .points {
+  display: inline-flex;
+  gap: 0.2rem;
+}
+
+.chat-chargement .points span {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--bleu);
+  animation: chat-rebond 1.2s infinite ease-in-out;
+}
+
+.chat-chargement .points span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.chat-chargement .points span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes chat-rebond {
+  0%, 80%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-0.2rem);
+  }
+}
+
+/* Zone de saisie : empilée sur mobile, en ligne au-dessus de 600 px */
+.chat-saisie {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chat-saisie textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--gris-bord);
+  border-radius: var(--rayon);
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.chat-saisie textarea:focus {
+  outline: 2px solid var(--bleu);
+  outline-offset: 1px;
+}
+
+.chat-saisie textarea:disabled {
+  background: var(--gris-bg);
+  opacity: 0.7;
+}
+
+.chat-saisie .bouton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (min-width: 600px) {
+  .chat-saisie {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .chat-saisie textarea {
+    flex: 1 1 auto;
+  }
+
+  .chat-saisie .bouton {
+    flex: 0 0 auto;
+    align-self: stretch;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Tableau de bord (US-06) — tuiles d'indicateurs et graphiques Chart.js.
+   Mobile first : une colonne à 375 px, sans défilement horizontal.
+--------------------------------------------------------------------------- */
+
+/* Sélecteur de période dans l'en-tête de page (largeur auto, pas pleine largeur) */
+.champ-periode {
+  margin-bottom: 0;
+}
+
+.champ-periode label {
+  display: inline-block;
+  margin: 0 0.5rem 0 0;
+}
+
+.champ-periode select {
+  width: auto;
+  min-width: 11rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--gris-bord);
+  border-radius: var(--rayon);
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--blanc);
+}
+
+.champ-periode select:focus {
+  outline: 2px solid var(--bleu);
+  outline-offset: 1px;
+}
+
+/* Grille d'indicateurs : empilée sur mobile, en colonnes au-delà de 600 px */
+.dashboard-grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Tuile d'indicateur chiffré (total, délai moyen) */
+.tuile {
+  text-align: center;
+}
+
+.tuile-valeur {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  line-height: 1.2;
+}
+
+.tuile-libelle {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Carte contenant un graphique */
+.graphique h2 {
+  font-size: 1.05rem;
+}
+
+/* Zone bornée pour le canvas : hauteur fixe, le canvas reste responsive et
+   ne provoque jamais de débordement horizontal. */
+.graphique-zone {
+  position: relative;
+  width: 100%;
+  height: 260px;
+}
+
+.graphique-zone canvas {
+  max-width: 100%;
+}
+
+@media (min-width: 600px) {
+  .dashboard-grille {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Les graphiques occupent toute la largeur pour rester lisibles */
+  .dashboard-grille .graphique {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 900px) {
+  .dashboard-grille .graphique {
+    grid-column: auto;
+  }
+}

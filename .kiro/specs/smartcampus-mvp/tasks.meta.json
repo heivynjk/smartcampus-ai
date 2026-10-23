@@ -1,0 +1,438 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Initialiser le projet": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749510476
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749527804
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749733065
+      }
+    ],
+    "2. Base de données et données de démo": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749512704
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749737203
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792750207470
+      }
+    ],
+    "3. Authentification et rôles": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749512996
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792750211601
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792750688071
+      }
+    ],
+    "4.1 `ticketService.creerTicket` : validation (RG-01), numéro `INC-AAAA-NNNNN` via séquence (RG-03), assignation au référent et priorité de la catégorie (RG-04), Sécurité → Critique (RG-05), première ligne d'historique, notification « pris en compte »": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749513352
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792750692716
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792750846566
+      }
+    ],
+    "4.2 `s3Service` + multer : JPG/PNG ≤ 5 Mo, upload `photos/`, erreurs en français": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749513654
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792750850813
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792751782920
+      }
+    ],
+    "4.3 `POST /api/tickets` (etudiant) + page `signaler.html` (champs obligatoires en rouge, écran de confirmation avec numéro et lien)": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749513993
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792751787372
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792751989286
+      }
+    ],
+    "4.4 Tests : création OK, champ manquant → 400, Sécurité → Critique": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749514403
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792751993249
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752093020
+      }
+    ],
+    "5.1 `ticketService.changerStatut` : transitions autorisées (RG-09), commentaire obligatoire pour Résolu (RG-10), contrôle technicien assigné ou admin (RG-07), historique + `maj_le` / `resolu_le` + notification étudiant (RG-11)": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749514701
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752098581
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752224594
+      }
+    ],
+    "5.2 `GET /api/technicien/tickets` (tri priorité puis date), `PATCH /api/tickets/:id/statut`, page `file.html` avec boutons « Prendre en charge » / « Résoudre » + champ commentaire, badge « En retard »": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749514970
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752229803
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752430041
+      }
+    ],
+    "5.3 Tests : tri de la file, Résolu sans commentaire → 400, transition Ouvert → Résolu refusée, autre technicien → 403": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749515226
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752434818
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752546752
+      }
+    ],
+    "6.1 `GET /api/tickets/mes-tickets`, `GET /api/tickets/:id` avec contrôle d'accès (RG-06), URL présignée de la photo, historique chronologique": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749515488
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752552449
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752745748
+      }
+    ],
+    "6.2 `GET /api/notifications`, `POST /api/notifications/:id/lue`, compteur de non lues dans la barre de navigation (rafraîchi toutes les 30 s)": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749515700
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752751058
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752910753
+      }
+    ],
+    "6.3 Pages `mes-demandes.html` et `ticket.html` (chronologie lisible sur mobile)": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749516054
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752915331
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753105282
+      }
+    ],
+    "6.4 Tests : liste filtrée sur l'auteur, ticket d'un autre étudiant → 403": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749516351
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753110379
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753194693
+      }
+    ],
+    "7.1 `bedrockService` : prompt système avec les fiches FAQ, `ConverseCommand` (Nova Lite), parsing JSON robuste, gestion d'erreur → 503": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749516652
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753201672
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753377551
+      }
+    ],
+    "7.2 `POST /api/chat` (etudiant) renvoyant `reponse`, `source`, `proposerSignalement`, `prefill`": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749517049
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753382641
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753537205
+      }
+    ],
+    "7.3 Page `chat.html` : bulles de conversation, historique de session côté navigateur, affichage de la fiche source, indicateur de chargement": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749517458
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753543331
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753703285
+      }
+    ],
+    "7.4 Tests avec Bedrock mocké : question couverte (source renseignée), hors périmètre → « Je ne sais pas » + proposerSignalement": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749517750
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753708928
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753896093
+      }
+    ],
+    "8.1 `statsService` : agrégats par catégorie, top 5 lieux, par statut, délai moyen en heures sur les résolus (RG-14), filtre semaine / mois / semestre": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749518116
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753902618
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754077601
+      }
+    ],
+    "8.2 `GET /api/stats` (admin uniquement, RG-15) + page `dashboard.html` (Chart.js, sélecteur de période, message « Aucun incident sur la période »)": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749518530
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754082917
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754274638
+      }
+    ],
+    "8.3 Tests : étudiant → 403, calcul du délai moyen sur un jeu connu": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749518784
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754279538
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754452525
+      }
+    ],
+    "9. US-05 — Créer un ticket depuis l'assistant (bonus)": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749519022
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754458156
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754731084
+      }
+    ],
+    "10. Relance des tickets non pris en charge": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749519246
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754736656
+      },
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754907367
+      }
+    ],
+    "11. Déploiement sur l'EC2 et recette": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792749519581
+      }
+    ],
+    "4. US-01 — Signaler un incident": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752093361
+      }
+    ],
+    "5. US-03 — Traiter un incident": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792752547571
+      }
+    ],
+    "6. US-02 — Suivre sa demande": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753194852
+      }
+    ],
+    "7. US-04 — Interroger l'assistant IA": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792753896478
+      }
+    ],
+    "8. US-06 — Piloter le campus": [
+      {
+        "executionId": "095e86cf-411d-4f5a-833c-2086ba71639a",
+        "chatSessionId": "sess_a3aa0581-eb3e-4822-8800-1bfa025ff5f0",
+        "timestamp": 1792754452917
+      }
+    ]
+  }
+}

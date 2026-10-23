@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCampus — Détail de la demande</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navigation"></div>
+
+  <main class="contenu">
+    <p class="fil-ariane">
+      <a href="mes-demandes.html">&larr; Retour à mes demandes</a>
+    </p>
+
+    <h1>Détail de la demande</h1>
+
+    <p id="erreur" class="message-erreur" role="alert"></p>
+
+    <!-- Détail du ticket (rempli dynamiquement) -->
+    <section id="detail" class="detail-ticket" aria-live="polite" hidden></section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/ticket.js"></script>
+</body>
+</html>

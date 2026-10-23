@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCampus — Mes demandes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navigation"></div>
+
+  <main class="contenu">
+    <div class="entete-page">
+      <h1>Mes demandes</h1>
+      <a href="signaler.html" class="bouton bouton-compact">Signaler un incident</a>
+    </div>
+
+    <p id="erreur" class="message-erreur" role="alert"></p>
+
+    <!-- Message affiché quand l'étudiant n'a aucune demande -->
+    <section id="bloc-vide" class="carte" hidden>
+      <p>Vous n'avez encore aucune demande.</p>
+      <p>
+        <a href="signaler.html" class="bouton">Signaler un incident</a>
+      </p>
+    </section>
+
+    <!-- Liste des demandes de l'étudiant, de la plus récente à la plus ancienne -->
+    <section id="liste-demandes" class="file" aria-live="polite"></section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/mes-demandes.js"></script>
+</body>
+</html>
